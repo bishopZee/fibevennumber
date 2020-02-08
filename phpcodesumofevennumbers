@@ -1,0 +1,28 @@
+<?php 
+
+ 
+function fibonaccieven($upperLimit){
+	//$num = "3258712" + 12380;
+	  $evensum = 0;
+    $num1=0;
+    $num2=1;
+    $counter=0;
+	//$evensum=0;
+	//$limit=500;
+	 while($counter< $upperLimit){
+		  // echo $counter;
+		      $num3 = $num2+$num1;
+	        $num1=$num2;
+          $num2=$num3;
+          $counter=$counter+1;
+          if ($num3%2==0) // checking if the number is even and adding suming up
+             (float)$evensum+=$num3; 
+		 
+		         echo $num3 . "</br>"; //checking if fibonacci sequence is being printed
+      }
+
+     
+	return $evensum;
+}
+
+echo fibonaccieven(5000000); // printing out the sum of even numbers to satisfy the 5million condition
